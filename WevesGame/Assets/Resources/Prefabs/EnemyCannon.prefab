@@ -60,7 +60,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4143412007188470
 Transform:
   m_ObjectHideFlags: 1
@@ -184,3 +184,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   seManager: {fileID: 0}
+  hpBarController: {fileID: 0}

@@ -266,9 +266,29 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1573563773937854, guid: b1b657ab9aa27b943ab606ac2d1a4092, type: 2}
+      propertyPath: m_Name
+      value: winScore
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b1b657ab9aa27b943ab606ac2d1a4092, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &706514666 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1877634977599522, guid: b1b657ab9aa27b943ab606ac2d1a4092,
+    type: 2}
+  m_PrefabInternal: {fileID: 706514665}
+--- !u!114 &706514667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 706514666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e21a1cf7fa24b3eb99319fdfcf4318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &762052881
 GameObject:
   m_ObjectHideFlags: 0
