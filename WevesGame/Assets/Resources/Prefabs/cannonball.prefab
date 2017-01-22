@@ -104,7 +104,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1994644171373294}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Convex: 1
@@ -122,3 +122,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3719b5063209224cb417988d8fff34a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  setWaveMin: 0.5
+  setWaveMax: 3.5

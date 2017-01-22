@@ -98,6 +98,25 @@ public class Player : MonoBehaviour {
 		}
 	}
 	void OnTriggerEnter(Collider collision) {
+		// 船と波
+		if (collision.gameObject.tag == "Wave") {
+			collision.enabled = false;
+			//var waveObject = GameObject.FindWithTag("Wave");
+			// 船を点滅させて一時当たり判定をなくす
+			if (damageflag == false) {
+				flashCount = 0;
+				damageflag = true;
+				// 反対側にはじく
+				if (inputMuki == 0) rigidBody.velocity = new Vector3 (rigidBody.velocity.x, rigidBody.velocity.y, -speed*3);
+				if (inputMuki == 1) rigidBody.velocity = new Vector3 (rigidBody.velocity.x, rigidBody.velocity.y, speed*3);
+				if (inputMuki == 2) rigidBody.velocity = new Vector3 (speed*3, rigidBody.velocity.y, rigidBody.velocity.z);
+				if (inputMuki == 3) rigidBody.velocity = new Vector3 (-speed*3, rigidBody.velocity.y, rigidBody.velocity.z);
+				// プレイヤーのColliderを消す
+				playerCollider.enabled = false;
+				// 点滅終了
+				Invoke ("FlashEnd", endTime);
+			}
+		}
 	}
 
 	// ダメージ

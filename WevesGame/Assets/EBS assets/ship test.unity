@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 1086915730}
   - component: {fileID: 1086915734}
   - component: {fileID: 1086915733}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: yacht-28
   m_TagString: Yacht
   m_Icon: {fileID: 0}
@@ -351,6 +351,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1121752054121330, guid: e6d2d7a3987a88f4aa189035c5c83f6f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742413938768250, guid: e6d2d7a3987a88f4aa189035c5c83f6f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399116288444618, guid: e6d2d7a3987a88f4aa189035c5c83f6f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1785833879647428, guid: e6d2d7a3987a88f4aa189035c5c83f6f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189688930986920, guid: e6d2d7a3987a88f4aa189035c5c83f6f, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6d2d7a3987a88f4aa189035c5c83f6f, type: 2}
   m_IsPrefabParent: 0
@@ -491,6 +511,10 @@ Prefab:
       propertyPath: seManager
       value: 
       objectReference: {fileID: 2023092478}
+    - target: {fileID: 1390839598496532, guid: e068b662f4fa911469e9f5c47a31c3da, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e068b662f4fa911469e9f5c47a31c3da, type: 2}
   m_IsPrefabParent: 0
@@ -646,7 +670,7 @@ GameObject:
   - component: {fileID: 2097325134}
   - component: {fileID: 2097325135}
   - component: {fileID: 2097325137}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -679,8 +703,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 394aba7df91bd4d8ebebea0016e0ff4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  slope: 2
+  speed: 5
+  slope: 3
 --- !u!4 &2097325136
 Transform:
   m_ObjectHideFlags: 0
@@ -689,7 +713,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2097325133}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1086915730}
@@ -706,5 +730,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 7, z: 6}
-  m_Center: {x: -1.4, y: 0, z: 0}
+  m_Size: {x: 1.5, y: 5, z: 6}
+  m_Center: {x: -1.4, y: -2, z: 1.5}
