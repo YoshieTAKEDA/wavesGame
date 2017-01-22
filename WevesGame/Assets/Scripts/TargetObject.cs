@@ -20,16 +20,17 @@ public class TargetObject : MonoBehaviour
                           objectPointInScreen.z);
 
         Vector3 mousePointInWorld = Camera.main.ScreenToWorldPoint(mousePointInScreen);
-        mousePointInWorld.z = this.transform.position.z;
+		//mousePointInWorld.z = this.transform.position.z;
+		mousePointInWorld.y = this.transform.position.y;
         this.transform.position = mousePointInWorld;
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonUp(0))
+        /*if (Input.GetMouseButtonUp(0))
         {
 
-            transform.position = new Vector3(targetpos.x, targetpos.x, targetpos.z);
-            }
+            transform.position = new Vector3(targetpos.x, targetpos.y, targetpos.z);
+            }*/
     } 
 }
