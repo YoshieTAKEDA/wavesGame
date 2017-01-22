@@ -18,10 +18,11 @@ public class StateManeger : MonoBehaviour {
 	public GAMESTATE state;
 	private float time;
 	private float goalTime;
-
+	
 	void Start () {
 		time = 0.0f;
 		goalTime = 60.0f;
+
 	}
 
 	// Update is called once per frame
