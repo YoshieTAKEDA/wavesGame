@@ -18,11 +18,9 @@ public class StateManeger : MonoBehaviour {
 	public GAMESTATE state;
 	private float time;
 	private float goalTime;
-	public ScoreText text;
-	
 	void Start () {
 		time = 0.0f;
-		goalTime = 60.0f;
+		goalTime = 30.0f;
 
 	}
 
@@ -47,7 +45,6 @@ public class StateManeger : MonoBehaviour {
 				if(time > goalTime){
 				// ゴールします
 				state = GAMESTATE.CLEAR;
-				text.GetComponent<ScoreText>().score = time;
 			}
 				Debug.Log("Plaing.");
 				Debug.Log(time);
