@@ -9,6 +9,9 @@ public class BulletMaker : MonoBehaviour {
     [SerializeField]float speed;
     private bool isReady;
     [SerializeField]GameObject seManager;
+    [SerializeField]GameObject hpBarController;
+    float BulletRecast;
+
 
 
     // Use this for initialization
@@ -39,11 +42,12 @@ public class BulletMaker : MonoBehaviour {
                 
                 
                 seManager.SendMessage("PlayCannon");
+                hpBarController.SendMessage("recast");
 
 
                 Debug.Log("cannontest");
 
-                Invoke("StandBy" , 1.5f);
+                Invoke("StandBy" , 3.0f);
             }
         }
 
