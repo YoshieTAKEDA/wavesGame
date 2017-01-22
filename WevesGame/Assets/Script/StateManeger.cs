@@ -20,7 +20,7 @@ public class StateManeger : MonoBehaviour {
 	private float goalTime;
 	void Start () {
 		time = 0.0f;
-		goalTime = 30.0f;
+		goalTime = 50.0f;
 
 	}
 

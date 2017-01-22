@@ -6,8 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/EBS assets/ship test.unity
+    path: Assets/EBS assets/Title.unity
   - enabled: 1
+    path: Assets/EBS assets/ship test.unity
+  - enabled: 0
     path: Assets/Scene/MainScene.unity
   - enabled: 1
     path: Assets/Scene/GameoverScene.unity
