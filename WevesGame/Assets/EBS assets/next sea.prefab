@@ -52,6 +52,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4359995772552846}
   - component: {fileID: 114133508087971286}
+  - component: {fileID: 65506400768190148}
+  - component: {fileID: 65036769966361570}
   m_Layer: 0
   m_Name: next sea
   m_TagString: Untagged
@@ -577,6 +579,30 @@ Skybox:
   m_GameObject: {fileID: 1606423177097934}
   m_Enabled: 1
   m_CustomSkybox: {fileID: 0}
+--- !u!65 &65036769966361570
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1223887820392672}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 5, z: 100}
+  m_Center: {x: -31, y: 0, z: 0}
+--- !u!65 &65506400768190148
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1223887820392672}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 5, z: 100}
+  m_Center: {x: 33, y: 0, z: 0}
 --- !u!114 &114133508087971286
 MonoBehaviour:
   m_ObjectHideFlags: 1

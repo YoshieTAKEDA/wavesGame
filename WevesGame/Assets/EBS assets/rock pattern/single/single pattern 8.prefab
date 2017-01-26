@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33680744312165146}
   - component: {fileID: 23028523652481044}
   - component: {fileID: 95901700767950718}
+  - component: {fileID: 65727342662329198}
   m_Layer: 0
   m_Name: Rock (1)
-  m_TagString: Untagged
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,6 +38,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4157047288375508}
+  - component: {fileID: 114221618804702032}
   m_Layer: 0
   m_Name: single pattern 8
   m_TagString: Untagged
@@ -65,7 +67,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1355969548596586}
   m_LocalRotation: {x: -0.7995509, y: 0.174469, z: 0.31653532, w: 0.4796711}
-  m_LocalPosition: {x: 14.361732, y: -0.2923485, z: 8.983412}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.30000025, y: 0.20000026, z: 0.10000016}
   m_Children: []
   m_Father: {fileID: 4157047288375508}
@@ -109,6 +111,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1355969548596586}
   m_Mesh: {fileID: 4300000, guid: 60f028e7a1b594a4bac0ffeaea1dec3c, type: 3}
+--- !u!65 &65727342662329198
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1355969548596586}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 24.434097, y: 19.712214, z: 20.023935}
+  m_Center: {x: 2.2684681, y: -0.41045538, z: -0.015044396}
 --- !u!95 &95901700767950718
 Animator:
   serializedVersion: 3
@@ -126,3 +140,15 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114221618804702032
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1455280890044380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 327ab78e20a204d9e84c51650821c2e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.3

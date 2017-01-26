@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33524562674775818}
   - component: {fileID: 23862938868932504}
   - component: {fileID: 95360152718510810}
+  - component: {fileID: 135701096716398766}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Untagged
@@ -40,6 +41,7 @@ GameObject:
   - component: {fileID: 33941227094365464}
   - component: {fileID: 23195823162435268}
   - component: {fileID: 95821247267802818}
+  - component: {fileID: 135465435024222760}
   m_Layer: 0
   m_Name: Rock (1)
   m_TagString: Untagged
@@ -213,3 +215,27 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!135 &135465435024222760
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1326968951283546}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 12.217053
+  m_Center: {x: 2.2684708, y: -0.41045523, z: -0.015044695}
+--- !u!135 &135701096716398766
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1234669087791898}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 12.217051
+  m_Center: {x: 2.2684703, y: -0.41045523, z: -0.015044689}

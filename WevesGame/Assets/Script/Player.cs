@@ -31,6 +31,7 @@ public class Player : MonoBehaviour {
 		// damage
 		if (damageflag) {
 			Damage();
+			sManeger.state = StateManeger.GAMESTATE.GAMEOVER;
 		}
 	}
 
@@ -89,20 +90,39 @@ public class Player : MonoBehaviour {
 				// プレイヤーのColliderを消す
 				playerCollider.enabled = false;
 				// 岩のColliderを消す
-				var rockCollider = GameObject.FindWithTag ("Rock").GetComponent<BoxCollider> ();
-				rockCollider.enabled = false;
+				// var rockCollider = GameObject.FindWithTag ("Rock").GetComponent<BoxCollider> ();
+				// rockCollider.enabled = false;
 				// 点滅終了
 				Invoke ("FlashEnd", endTime);
 			}
 		}
 	}
 	void OnTriggerEnter(Collider collision) {
+		// 船と波
+		if (collision.gameObject.tag == "Wave") {
+			collision.enabled = false;
+			//var waveObject = GameObject.FindWithTag("Wave");
+			// 船を点滅させて一時当たり判定をなくす
+			if (damageflag == false) {
+				flashCount = 0;
+				damageflag = true;
+				// 反対側にはじく
+				if (inputMuki == 0) rigidBody.velocity = new Vector3 (rigidBody.velocity.x, rigidBody.velocity.y, -speed*3);
+				if (inputMuki == 1) rigidBody.velocity = new Vector3 (rigidBody.velocity.x, rigidBody.velocity.y, speed*3);
+				if (inputMuki == 2) rigidBody.velocity = new Vector3 (speed*3, rigidBody.velocity.y, rigidBody.velocity.z);
+				if (inputMuki == 3) rigidBody.velocity = new Vector3 (-speed*3, rigidBody.velocity.y, rigidBody.velocity.z);
+				// プレイヤーのColliderを消す
+				playerCollider.enabled = false;
+				// 点滅終了
+				Invoke ("FlashEnd", endTime);
+			}
+		}
 	}
 
 	// ダメージ
 	void Damage() {
 		flashCount++;
-		Renderer ren = gameObject.GetComponent<Renderer> ();
+		Renderer ren = GameObject.FindWithTag("Yacht").GetComponent<Renderer> ();
 		if (flashCount % 2 == 0) {
 			ren.enabled = !ren.enabled;
 		}
@@ -111,11 +131,11 @@ public class Player : MonoBehaviour {
 	// 点滅終了
 	void FlashEnd() {
 		damageflag = false;
-		gameObject.GetComponent<Renderer> ().enabled = true;
+		GameObject.FindWithTag("Yacht").GetComponent<Renderer> ().enabled = true;
 		// プレイヤーのColliderを戻す
 		playerCollider.enabled = true;
 		// 岩のColliderを戻す
-		var rockCollider = GameObject.FindWithTag ("Rock").GetComponent<BoxCollider> ();
-		rockCollider.enabled = true;
+		// var rockCollider = GameObject.FindWithTag ("Rock").GetComponent<BoxCollider> ();
+		// rockCollider.enabled = true;
 	}
 }

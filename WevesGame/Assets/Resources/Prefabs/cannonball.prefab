@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4259490680547084}
   - component: {fileID: 33894978211352888}
   - component: {fileID: 23223356598697692}
-  - component: {fileID: 95713553995976864}
   - component: {fileID: 64713125001338618}
   - component: {fileID: 54414004182266450}
   - component: {fileID: 114093821850459776}
@@ -40,7 +39,7 @@ Transform:
   m_GameObject: {fileID: 1994644171373294}
   m_LocalRotation: {x: -0.7071068, y: -0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 31.609957, y: 9.599749, z: 147.93312}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -58,7 +57,7 @@ MeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 76e63aeb558fb7d4896be2e72fe195ec, type: 2}
+  - {fileID: 2100000, guid: aa6952feb8b4cf84c8dc56942233d7d7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -82,7 +81,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1994644171373294}
-  m_Mesh: {fileID: 4300000, guid: 6eb83a967fda2c242a331187a4d2df32, type: 3}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!54 &54414004182266450
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -105,30 +104,13 @@ MeshCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1994644171373294}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Convex: 1
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 6eb83a967fda2c242a331187a4d2df32, type: 3}
---- !u!95 &95713553995976864
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1994644171373294}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 6eb83a967fda2c242a331187a4d2df32, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114093821850459776
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -140,3 +122,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3719b5063209224cb417988d8fff34a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  setWaveMin: 0.5
+  setWaveMax: 3.5

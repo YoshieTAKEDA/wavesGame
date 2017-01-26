@@ -15,41 +15,53 @@ public class StateManeger : MonoBehaviour {
 		RESTART,
 		QUIT,
 	}
-	public GAMESTATE state = GAMESTATE.NONE;
-
+	public GAMESTATE state;
+	private float time;
+	private float goalTime;
+	
 	void Start () {
+		time = 0.0f;
+		goalTime = 60.0f;
+
 	}
 
 	// Update is called once per frame
 	void Update () {
-		// 一度だけ実行…どのように実装しようかしら
-		if (state == GAMESTATE.NONE){
-			if (Input.GetMouseButtonDown(0)) {
-				Debug.Log("シーン読み込み");
+		if(state == GAMESTATE.NONE){
+			if(Input.GetKeyDown(KeyCode.Space)){
 				SceneManager.LoadScene("ship test");
+				Debug.Log("MainScene loaded.");
 				state = GAMESTATE.START;
 			}
 		}
-		// ステート遷移＋初期化フェイズ
 		switch(state){
 			case GAMESTATE.START:
 			{
-
+				state = GAMESTATE.PLAY;
 			}
 			break;
 			case GAMESTATE.PLAY:
 			{
-				// play
+				time += Time.deltaTime;
+				if(time > goalTime){
+				// ゴールします
+				state = GAMESTATE.CLEAR;
+			}
+				Debug.Log("Plaing.");
+				Debug.Log(time);
 			}
 			break;
 			case GAMESTATE.CLEAR:
 			{
-				// clear
+				Debug.Log("Clear!");
+				SceneManager.LoadScene("ClearScene");
+				Debug.Log("ClearScene loaded.");
 			}
 			break;
 			case GAMESTATE.GAMEOVER:
 			{
-				// Gameoverシーン
+				SceneManager.LoadScene("GameoverScene");
+				Debug.Log("GameoverScene loaded.");
 			}
 			break;
 			case GAMESTATE.RESTART:
@@ -59,43 +71,7 @@ public class StateManeger : MonoBehaviour {
 			break;
 			case GAMESTATE.QUIT:
 			{
-				// ゲーム終了
-			}
-			break;
-		}
-		// 実行フェイズ
-		switch(state){
-			case GAMESTATE.START:
-			{
-				Debug.Log("start");
-			}
-			break;
-			case GAMESTATE.PLAY:
-			{
-				// play
-				Debug.Log("Play");
-			}
-			break;
-			case GAMESTATE.CLEAR:
-			{
-				// clearシーンの表示
-				Debug.Log("Clear");
-			}
-			break;
-			case GAMESTATE.GAMEOVER:
-			{
-				// Gameoverシーン
-				Debug.Log("Gameover");
-			}
-			break;
-			case GAMESTATE.RESTART:
-			{
-				Debug.Log("Restart");
-			}
-			break;
-			case GAMESTATE.QUIT:
-			{
-				Debug.Log("Quit");
+				Debug.Log("quit.");
 			}
 			break;
 		}
